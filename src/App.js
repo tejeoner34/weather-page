@@ -1,8 +1,10 @@
+import { Fragment } from 'react';
 import './App.css';
+import MainContainer from './components/mainContainer';
 
 function App() {
   return (
-    <h1>Inicio</h1>
+      <MainContainer></MainContainer>
   );
 }
 
