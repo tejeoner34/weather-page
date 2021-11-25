@@ -1,14 +1,20 @@
-import { Grid, Container } from "@material-ui/core";
+import { Grid, Container, Box } from "@material-ui/core";
 
-export default function DailiesComponent(){
+export default function DailiesComponent() {
 
 
     return (
-        <Grid container xl={2}> 
-            <Grid item>
-                <Container> Esto es la info de los dailies por props</Container>
-                <Container> Esto es la info de los dailies por props</Container>
-                <Container> Esto es la info de los dailies por props</Container>
+        <Grid container >
+            <Grid item xs={12}>
+                <Box sx={{
+                    bgcolor: '#ff0000',
+                }}> dailies </Box>
+                <Box sx={{
+                    bgcolor: '#ff0000',
+                }}> dailies </Box>
+                <Box sx={{
+                    bgcolor: '#ff0000',
+                }}> dailies </Box>
             </Grid>
         </Grid>
     )

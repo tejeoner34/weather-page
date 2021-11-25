@@ -1,10 +1,10 @@
 import { createTheme } from '@material-ui/core/styles';
 
-const theme = createTheme({
+ const theme = createTheme({
     palette: {
         primary: {
             // light: will be calculated from palette.primary.main,
-            main: '#ff4400',
+            main: 'rgb(165 201 186)',
             // dark: will be calculated from palette.primary.main,
             // contrastText: will be calculated to contrast with palette.primary.main
         },
@@ -36,9 +36,7 @@ const theme = createTheme({
             '"Segoe UI Symbol"',
         ].join(','),
     },
-    spacing:
-    {
-        spacing: 4,
-    },
 
 });
+
+export default theme
