@@ -1,4 +1,5 @@
 import { Box, Grid} from "@material-ui/core"
+import ActualInfo from "../actualInfo";
 import DailiesComponent from '../dailiesComponent';
 import './style.css'
 
@@ -16,6 +17,9 @@ export default function  ActualDay(){
                  </Grid>
                 <Grid item xs={2}>
                     <DailiesComponent></DailiesComponent>
+                </Grid>
+                <Grid item xs={12}>
+                    <ActualInfo sx={{height:"300px"}}></ActualInfo>
                 </Grid>
             </Grid>
         </Grid>

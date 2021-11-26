@@ -1,12 +1,12 @@
 import { Grid } from '@material-ui/core';
 import * as React from 'react';
 import './style.css'
-import BasicTextField from '../input';
-import CustomizedSwitch from '../switch';
-import AvatarContainer from '../avatarContainer';
+import BasicTextField from '../../components/input';
+import CustomizedSwitch from '../../components/switch';
+import AvatarContainer from '../../components/avatarContainer';
 
-import WeekDayContainer from '../weekDayContainer';
-import ActualDay from '../actualDay';
+import WeekDayContainer from '../../components/weekDayContainer';
+import ActualDay from '../../components/actualDay';
 
 export default function MainContainer() {
 
