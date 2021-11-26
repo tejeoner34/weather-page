@@ -1,19 +1,21 @@
-import {Card, Grid } from '@mui/material'
+import { Grid } from '@mui/material';
+import WeekCard from './cardWeekDay';
+import './style.css';
+
 
 export default function WeekDayContainer(){
 
 
     return(
         <Grid container direction="row">
-            <Grid item container direction="row" xs={12}>
-            <Card> WeekDay </Card>
-            <Card> WeekDay </Card>
-            <Card> WeekDays </Card>
-            <Card> WeekDay </Card>
-            <Card> WeekDay </Card>
-            <Card> WeekDays </Card>
-            <Card> WeekDay </Card>
-            <Card> dWeekDay </Card>
+            <Grid className="grid_container_card" item container direction="row" xs={12}>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
+            <WeekCard> </WeekCard>
             </Grid>
         </Grid>
     )
