@@ -1,0 +1,7 @@
+.grid__style{
+    border: solid 1px black;
+}
+
+.grid__style--item{
+    border: solid 1px rgb(58, 250, 234);
+}
