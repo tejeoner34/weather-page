@@ -1,7 +1,6 @@
-import { ThemeProvider } from '@material-ui/styles';
-import { Fragment } from 'react';
+import { ThemeProvider } from '@emotion/react';
 import './App.css';
-import MainContainer from './components/mainContainer';
+import MainContainer from './page/mainContainer';
 import theme from './components/theming';
 
 function App() {

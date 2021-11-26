@@ -1,7 +1,13 @@
 .grid__style{
     border: solid 1px black;
+    background-color: cadetblue;
 }
 
 .grid__style--item{
     border: solid 1px rgb(58, 250, 234);
+    background-color: coral;
+}
+
+.grid__style--item-block{
+    
 }

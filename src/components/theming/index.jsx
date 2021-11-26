@@ -1,4 +1,4 @@
-import { createTheme } from '@material-ui/core/styles';
+import { createTheme } from '@mui/material/styles'
 
  const theme = createTheme({
     palette: {
@@ -36,6 +36,9 @@ import { createTheme } from '@material-ui/core/styles';
             '"Segoe UI Symbol"',
         ].join(','),
     },
+    spacing:  (factor) => {
+        console.log(factor)
+        return `${0.25 * factor}rem`}
 
 });
 

@@ -1,4 +1,4 @@
-import { Grid, Container, Box } from "@material-ui/core";
+import { Grid, Box } from '@mui/material'
 
 export default function DailiesComponent() {
 
