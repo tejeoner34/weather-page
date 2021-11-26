@@ -1,32 +1,100 @@
-import { Grid, Typography } from '@mui/material'
+import {  Typography, Stack, CardMedia } from '@mui/material';
+import './style.css'
+import faseLunar from './faseLunar/Asset 21.png';
 
 
 export default function ActualInfo(){
 
-
     return (
-        <Grid container xs={12} className="grid__style--item">
-            <Typography>
-                <h1>34º</h1>
-                <p>Sensación termica</p> 
-            </Typography>
-            <Typography>
-                <h1>34º</h1>
-                <p>Sensación termica</p> 
-            </Typography>
-            <Typography>
-                <h1>34º</h1>
-                <p>Sensación termica</p> 
-            </Typography>
-            <Typography>
-                <h1>34º</h1>
-                <p>Sensación termica</p> 
-            </Typography>
-            <Typography>
-                <h1>34º</h1>
-                <p>Sensación termica</p> 
-            </Typography>
-        </Grid>
+        <Stack xs={12} 
+            direction="row" 
+            spacing={5}
+            justifyContent="space-around"
+            alignItems="center"
+            square={true} className="card_ActualInfo">
+            <Stack direction="column"
+                justifyContent="center"
+                alignItems="center"
+                width="60px"
+                spacing={1}>
+                <Typography gutterBottom variant="h6" component="h4">
+                    34º C
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Sensación térmica
+                </Typography>        
+               
+            </Stack>
+             <Stack direction="column"
+                justifyContent="center"
+                alignItems="center"
+                width="60px"
+                spacing={1}>
+                <Typography gutterBottom variant="h6" component="h4">
+                    5 KPH
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Velocidad del viento
+                    </Typography>       
+               
+            </Stack>
+             <Stack direction="column"
+                justifyContent="center"
+                alignItems="center"
+                width="60px"
+                spacing={1}>
+                <Typography gutterBottom variant="h6" component="h4">
+                    60%
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Humedad ambiental
+                </Typography>        
+            </Stack>
+            <Stack direction="column"
+                justifyContent="center"
+                alignItems="center"
+                width="60px"
+                spacing={1}>
+                <Typography gutterBottom variant="h6" component="h4">
+                    Alto
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Índice UV
+                </Typography>        
+            </Stack>
+     
+           <Stack direction="column"
+                justifyContent="center"
+                alignItems="center"
+                width="60px"
+                spacing={1}>
+                <Typography gutterBottom variant="h6" component="h4">
+                    8:12
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Amanecer
+                </Typography>
+                <Typography gutterBottom variant="h6" component="h4">
+                    18:12
+                </Typography>        
+                <Typography variant="body2" color="textSecondary" component="p">
+                    Atardecer
+                </Typography>
+            </Stack>
+            <Stack direction="column"
+                justifyContent="center"
+                alignItems="center">
+                    <CardMedia
+                        component="img"
+                        className= "image_actualinfo"
+                        alt="icono tiempo diario"
+                        image={faseLunar}
+                    />
+                    <Typography variant="body2" color="textSecondary" component="p">
+                        Fase Lunar
+                    </Typography>
+            </Stack>
+        </Stack>
 
-    )
+    );
 }

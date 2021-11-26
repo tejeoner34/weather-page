@@ -1,0 +1,11 @@
+.image_actualinfo{
+    max-width:50px;
+    max-height: 50px;
+}
+
+/* card_ActualInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */

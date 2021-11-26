@@ -15,7 +15,7 @@ export default function ActualDay() {
                 <Grid item xs={3}>
                     <Box sx={{
                         bgcolor: '#ff0000',
-                        border: 'solid',
+                       
                     }}>contenido</Box>
                 </Grid>
                 <Grid item xs={2}>
