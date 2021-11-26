@@ -4,7 +4,7 @@ export default function AvatarContainer() {
 
     return (
 
-        <Paper style={{ color: 'white', backgroundColor: '#e91e63' }}>
+        <Paper style={{ color: 'white', backgroundColor: '#e91e63', height:"500px" }}>
             <img src="url" alt="Avatar" />
         </Paper>
     )

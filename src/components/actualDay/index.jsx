@@ -9,7 +9,7 @@ export default function ActualDay() {
     return (
         <Grid container >
             <Grid item container xs={12} 
-            justifyContent="space-around" 
+            justifyContent="space-between" 
             className="grid__style--item" 
             spacing={2}>
                 <Grid item xs={3}>
