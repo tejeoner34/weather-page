@@ -1,4 +1,4 @@
-import { Box, Card, Grid } from "@material-ui/core"
+import {Card, Grid } from '@mui/material'
 
 export default function WeekDayContainer(){
 

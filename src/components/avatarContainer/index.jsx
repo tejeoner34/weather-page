@@ -1,4 +1,4 @@
-import { Paper } from "@material-ui/core"
+import { Paper } from '@mui/material'
 
 export default function AvatarContainer() {
 
