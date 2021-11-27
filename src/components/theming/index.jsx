@@ -1,21 +1,27 @@
 import { createTheme } from '@mui/material/styles';
-import Typominecraft from '../../page/assets/fonts/MinecraftBold-nMK1.otf';
+import Typominecraft from '../../page/assets/fonts/MinecraftRegular-Bmg3.otf';
+import TypominecraftBold from '../../page/assets/fonts/MinecraftBold-nMK1.otf';
+import OrbitronLight from '../../page/assets/fonts/OrbitronLight-lqBq.otf';
+import OrbitronBold from '../../page/assets/fonts/OrbitronBold-93z0.otf';
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: 'rgb(165 201 186)',
-        },
-        secondary: {
-            light: '#0066ff',
-            main: '#0044ff',
-            contrastText: '#ffcc00',
+            main: '#9DCED7',
+            accent: '#AA6CD2',
+            text: '#2C2233',
+            secondaryText: '#F3F3F4',
+            cardBG: '#E8F9FC',
+            searchBG: '#C4C4C4',
         },
         contrastThreshold: 3,
         tonalOffset: 0.2,
     },
     typography: {
         fontFamily:[ '"Minecraft"',
+        '"MinecraftBold"',
+        '"OrbitronLight"',
+        '"OrbitronBold"',
             '-apple-system',
             'BlinkMacSystemFont',
             '"Segoe UI"',
@@ -40,9 +46,43 @@ const theme = createTheme({
                 font-style: normal;
                 src: url('${Typominecraft}') format('opentype');
                 }
-                @font-face`,
+                @font-face {
+                    font-family: 'MinecraftBold';
+                    font-style: normal;
+                    src: url('${TypominecraftBold}') format('opentype');
+                    }
+                    @font-face {
+                        font-family: 'OrbitronLight';
+                        font-style: normal;
+                        src: url('${OrbitronLight}') format('opentype');
+                        }
+                        @font-face {
+                            font-family: 'OrbitronBold';
+                            font-style: normal;
+                            src: url('${OrbitronBold}') format('opentype');
+                            }
+                    `,
         },
     },
 });
 
 export default theme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
