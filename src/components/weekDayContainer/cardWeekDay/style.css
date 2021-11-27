@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
       
-    
+
 }
 .image_card{
     max-width: 60px;
@@ -19,4 +19,5 @@
 .image{
     max-width: 10px;
     max-height: 10px;
+    
 }

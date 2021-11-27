@@ -12,11 +12,13 @@ import humidity from '../assets/water.png';
 import './style.css';
 
 export default function WeekCard() {
+
   return (
+    
     <Fragment>
     <Card square={true} className="card" sx={{ maxWidth: 150, boxShadow:'sucess.main'
      } }>
-       
+
        <Typography gutterBottom variant="h6" component="h3">
           Viernes
         </Typography>

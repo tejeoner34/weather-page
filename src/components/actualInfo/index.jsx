@@ -5,8 +5,9 @@ import faseLunar from './faseLunar/Asset 21.png';
 
 export default function ActualInfo(){
 
-    
+
     return (
+        
         <Stack xs={12} 
             direction="row" 
             spacing={5}
