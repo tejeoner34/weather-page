@@ -5,6 +5,7 @@ import faseLunar from './faseLunar/Asset 21.png';
 
 export default function ActualInfo(){
 
+    
     return (
         <Stack xs={12} 
             direction="row" 
@@ -90,6 +91,7 @@ export default function ActualInfo(){
                         className= "image_actualinfo"
                         alt="icono tiempo diario"
                         image={faseLunar}
+
                     />
                     <Typography variant="body2" color="textSecondary" component="p">
                         Fase Lunar
