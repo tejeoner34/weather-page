@@ -1,0 +1,9 @@
+.switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.selected{
+    color: #AA6CD2;
+}

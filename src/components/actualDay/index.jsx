@@ -3,7 +3,7 @@ import ActualInfo from "../actualInfo";
 import DailiesComponent from '../dailiesComponent';
 import './style.css'
 
-export default function ActualDay() {
+export default function ActualDay(props) {
 
 
     return (
@@ -22,7 +22,7 @@ export default function ActualDay() {
                     <DailiesComponent></DailiesComponent>
                 </Grid>
                 <Grid item xs={12}>
-                    <ActualInfo></ActualInfo>
+                    <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
                 </Grid>
             </Grid>
         </Grid>
