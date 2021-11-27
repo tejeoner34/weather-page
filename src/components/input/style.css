@@ -1,0 +1,8 @@
+.search-bar{
+    border-top: solid 2px gray;
+  border-left: solid 2px gray;
+  border-bottom: solid 1px white;
+  border-right: solid 1px white;
+  background: #C4C4C4;
+  height: 31px;
+}

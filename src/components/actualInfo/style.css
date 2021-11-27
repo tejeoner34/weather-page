@@ -1,0 +1,14 @@
+.image_actualinfo{
+    max-width:3em;
+    max-height: 3em;
+}
+/* card_ActualInfo{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+.card_ActualInfo{
+    
+    margin-bottom: 2em;
+}
