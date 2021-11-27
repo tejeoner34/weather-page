@@ -18,7 +18,7 @@ export default function WeekDayContainer(){
             <WeekCard></WeekCard>
             <WeekCard></WeekCard>
             <WeekCard></WeekCard>
-            
+
             </Grid>
         </Grid>
     )
