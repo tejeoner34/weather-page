@@ -11,16 +11,16 @@ export default function ActualInfo(){
             spacing={5}
             justifyContent="space-around"
             alignItems="center"
-            square={true} className="card_ActualInfo">
+            square={true} className="card_ActualInfo" >
             <Stack direction="column"
                 justifyContent="center"
                 alignItems="center"
-                width="60px"
-                spacing={1}>
+                width="4em"
+                spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
                     34º C
                 </Typography>        
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color="textSecondary" component="p"textAlign="center">
                     Sensación térmica
                 </Typography>        
                
@@ -28,21 +28,21 @@ export default function ActualInfo(){
              <Stack direction="column"
                 justifyContent="center"
                 alignItems="center"
-                width="60px"
-                spacing={1}>
+                width="4em"
+                spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
                     5 KPH
                 </Typography>        
-                <Typography variant="body2" color="textSecondary" component="p">
-                    Velocidad del viento
+                <Typography variant="body2" color="textSecondary" component="p" textAlign="center">
+                    Velocidad viento
                     </Typography>       
                
             </Stack>
              <Stack direction="column"
                 justifyContent="center"
                 alignItems="center"
-                width="60px"
-                spacing={1}>
+                width="4em"
+                spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
                     60%
                 </Typography>        
@@ -53,8 +53,8 @@ export default function ActualInfo(){
             <Stack direction="column"
                 justifyContent="center"
                 alignItems="center"
-                width="60px"
-                spacing={1}>
+                width="4em"
+                spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
                     Alto
                 </Typography>        
@@ -66,8 +66,8 @@ export default function ActualInfo(){
            <Stack direction="column"
                 justifyContent="center"
                 alignItems="center"
-                width="60px"
-                spacing={1}>
+                width="4em"
+                spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
                     8:12
                 </Typography>        
@@ -83,7 +83,8 @@ export default function ActualInfo(){
             </Stack>
             <Stack direction="column"
                 justifyContent="center"
-                alignItems="center">
+                alignItems="center"
+                >
                     <CardMedia
                         component="img"
                         className= "image_actualinfo"
