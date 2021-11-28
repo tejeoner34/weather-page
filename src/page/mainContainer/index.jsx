@@ -14,7 +14,7 @@ import Background from '../../page/assets/Background.png';
 
 export default function MainContainer() {
 
-    const API = 'fbe6cfd7582195b7a5d395286d5ea052';
+    const API = '';
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
@@ -113,7 +113,7 @@ export default function MainContainer() {
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{minHeight:"550px"}}>
+            <Grid item container xs={12} sx={{minHeight:"500px"}}>
                 <ActualDay data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
