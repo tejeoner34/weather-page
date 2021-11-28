@@ -35,7 +35,7 @@ const theme = createTheme({
         ].join(','),
     },
     spacing: (factor) => {
-        console.log(factor)
+        
         return `${0.25 * factor}rem`
     },
     components: {
