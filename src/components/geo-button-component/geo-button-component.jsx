@@ -7,25 +7,25 @@ export default function GeoButton(props) {
 
     return (
         <Button
-        onClick={props.onSelectGeo}
-        style={
-            {
-                maxWidth: '36px',
-                maxHeight: '36px',
-                minWidth: '36px',
-                minHeight: '36px',
-                borderRadius: 0,
-                
-            }}
+            onClick={props.onSelectGeo}
+            style={
+                {
+                    maxWidth: '33px',
+                    maxHeight: '33px',
+                    minWidth: '33px',
+                    minHeight: '33px',
+                    borderRadius: 0,
+
+                }}
             sx={
                 {
                     border: 2,
-                    backgroundColor:'primary.accent',
-                    "&:hover": {backgroundColor: 'primary.accent'},
+                    backgroundColor: 'primary.accent',
+                    "&:hover": { backgroundColor: 'primary.accent' },
                     borderColor: 'primary.cardBG',
-                    boxShadow: 4,
-                    
+                    boxShadow: 6,
+
                 }}
-             variant="contained"><img src={geoLogo} /></Button>
+            variant="contained"><img src={geoLogo} /></Button>
     )
 }
