@@ -9,6 +9,7 @@ import ActualDay from '../../components/actualDay';
 import { useEffect, useState } from 'react';
 import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
+import GeoButton from '../../components/geo-button-component/geo-button-component';
 
 
 export default function MainContainer() {
@@ -68,12 +69,39 @@ export default function MainContainer() {
             .then(d => {
                 updateWeatherInfo({ ...d })
             });
+    };
+
+
+    const onHandleGeoLocalization = ()=>{
+        const getCurrentLocation = () => {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                console.log('error');
+            }
+        };
+        // funcion que se encarga de hacer una llamada fetch usando los datos de localizacion obtenidos del navegador. También guardamos esta localizacion en el estado
+        const showPosition = (position) => {
+            setLat(position.coords.latitude);
+            setLon(position.coords.longitude);
+            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,minutely&units=metric&appid=${API}`)
+                .then(r => r.json())
+                .then(d => {
+                    updateWeatherInfo({ ...d })
+                    const luna = d.daily[0].moon_phase;
+                    updateMoon(luna);
+                });
+        }
+        getCurrentLocation();
     }
 
     return (
         <Grid container className="grid__style" rowSpacing={"80px"}>
             <Grid item xs={9}>
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>
+            </Grid>
+            <Grid item xs={1}>
+                <GeoButton onSelectGeo={onHandleGeoLocalization}></GeoButton>
             </Grid>
             <Grid item xs={2} className="grid__style">
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
