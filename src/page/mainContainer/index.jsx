@@ -38,6 +38,7 @@ export default function MainContainer() {
                 .then(r => r.json())
                 .then(d => {
                     updateWeatherInfo({ ...d })
+                    console.log(d)
                     const luna = d.daily[0].moon_phase;
                     updateMoon(luna);
                 });

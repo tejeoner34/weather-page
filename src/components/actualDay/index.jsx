@@ -24,9 +24,9 @@ export default function ActualDay(props) {
                     }}>contenido</Box>
                 </Grid>
                 
-                <Grid item container xs={2} justifyContent="center" >
-                    <DailiesComponent></DailiesComponent>
-                    <AvatarContainer data={props.current}></AvatarContainer>
+                <Grid item container xs={2} justifyContent="center" alignItems='center' flexDirection='column' rowGap={2} >
+                    <Grid item container justifyContent="space-between" alignItems='space-between' flexDirection='column' rowGap={3}><DailiesComponent data={props.data}></DailiesComponent></Grid>
+                    <Grid item><AvatarContainer data={props.current}></AvatarContainer></Grid>
                 </Grid>
                 <Grid item xs={12}>
                     <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
