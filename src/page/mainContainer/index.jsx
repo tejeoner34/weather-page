@@ -3,18 +3,18 @@ import * as React from 'react';
 import './style.css'
 import BasicTextField from '../../components/input';
 import UnitChange from '../../components/switch';
-import AvatarContainer from '../../components/avatarContainer';
 import WeekDayContainer from '../../components/weekDayContainer';
 import ActualDay from '../../components/actualDay';
 import { useEffect, useState } from 'react';
 import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
 import GeoButton from '../../components/geo-button-component/geo-button-component';
+import Background from '../../page/assets/Background.png';
 
 
 export default function MainContainer() {
 
-    const API = '';
+    const API = 'fbe6cfd7582195b7a5d395286d5ea052';
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
@@ -95,26 +95,31 @@ export default function MainContainer() {
         getCurrentLocation();
     }
 
+    const styles = {
+        gridContainer: {
+            backgroundImage: `url(${Background})`
+        }
+    };
+
     return (
-        <Grid container className="grid__style" rowSpacing={"80px"}>
+        <Grid container style={styles.gridContainer} justifyContent="center" >
+        <Grid item container sx={{ maxWidth: "890px"}}>
             <Grid item xs={9}>
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>
             </Grid>
             <Grid item xs={1}>
                 <GeoButton onSelectGeo={onHandleGeoLocalization}></GeoButton>
             </Grid>
-            <Grid item xs={2} className="grid__style">
+            <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item xs={3} className="grid__style">
-                <AvatarContainer data={weatherInfo?.current}></AvatarContainer>
-            </Grid>
-            <Grid item container xs={9} className="grid__style">
+            <Grid item container xs={12} sx={{minHeight:"550px"}}>
                 <ActualDay data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
-            <Grid item container xs={12} className="grid__style">
+            <Grid item container xs={12}>
                 <WeekDayContainer data={weatherInfo}></WeekDayContainer>
             </Grid>
+        </Grid>
         </Grid>
     )
 }
