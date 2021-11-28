@@ -11,9 +11,9 @@ export default function TextFieldSizes(props) {
 
   return (
     
-      <form onSubmit={(e)=>onhandleSubmit(e)} >
-        <input className='search-bar' name='location' type="text" />
-        <button type='submit'>Search</button>
+      <form onSubmit={(e)=>onhandleSubmit(e)} className='form'>
+        <input className='search-bar' name='location' type="text"/>
+        <button className='button-style' type='submit'>Buscar</button>
       </form>
     
   );

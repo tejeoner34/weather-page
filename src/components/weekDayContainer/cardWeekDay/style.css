@@ -5,8 +5,8 @@
     justify-content: center;
     align-items: center;
     gap: 1em;
-    -webkit-box-shadow: 6px 6px 0px -1px rgba(0,0,0,0.74);
-    box-shadow: 6px 6px 0px -1px rgba(0,0,0,0.74);
+    -webkit-box-shadow: 6px 6px 2px -1px rgba(0,0,0,0.74);
+    box-shadow: 6px 6px 2px -1px rgba(0,0,0,0.74);
 }
 .temperature_container{
     padding: 0%;

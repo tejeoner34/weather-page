@@ -10,7 +10,7 @@ import humidity from '../assets/water.png';
 import './style.css';
 export default function WeekCard(props) {
   let dataData = parseInt(props.data.dt);
-  let dataDate = dataData*1000;
+  let dataDate = dataData * 1000;
   let monthDay = new Date(dataDate).getDate();
   const dias = [
     'Domingo',
@@ -25,25 +25,26 @@ export default function WeekCard(props) {
   const nombreDia = dias[numeroDia];
   return (
     <Fragment>
-    <Card square={true} className="card_container" sx={{ width: '116px', height:'220px', bgcolor:'#F0EFF2' 
-     } }>
-       <Typography variant="p" >
+      <Card square={true} className="card_container" variant="elevation: 2" sx={{
+        width: '116px', height: '180px', bgcolor: '#F0EFF2', marginBottom:"20px",
+      }}>
+        <Typography variant="p" >
           {`${nombreDia}, ${monthDay}`}
         </Typography>
-      <CardMedia
-        component="img"
-        className= "image_card"
-        alt="icono tiempo diario"
-        image={window.location.origin +`/img/icons/${props.data.weather[0].icon}.png`}
-      />
-       <Box className='temperature_container'>
-         <Stack  direction="row"
-                justifyContent="flex-start"
-                gap="5px"
-                alignItems="center">
+        <CardMedia
+          component="img"
+          className="image_card"
+          alt="icono tiempo diario"
+          image={window.location.origin + `/img/icons/${props.data.weather[0].icon}.png`}
+        />
+        <Box className='temperature_container'>
+          <Stack direction="row"
+            justifyContent="flex-start"
+            gap="5px"
+            alignItems="center">
             <CardMedia
               component="img"
-              className= "image"
+              className="image"
               alt="icono tiempo diario"
               image={upArrow}
             />
@@ -52,12 +53,12 @@ export default function WeekCard(props) {
             </Typography>
           </Stack>
           <Stack direction="row"
-                justifyContent="flex-start"
-                gap="5px"
-                alignItems="center">
+            justifyContent="flex-start"
+            gap="5px"
+            alignItems="center">
             <CardMedia
               component="img"
-              className= "image"
+              className="image"
               alt="icono tiempo diario"
               image={downArrow}
             />
@@ -66,22 +67,22 @@ export default function WeekCard(props) {
             </Typography>
           </Stack>
           <Stack direction="row"
-                justifyContent="flex-start"
-                gap="5px"
-                alignItems="center"
-                >
+            justifyContent="flex-start"
+            gap="5px"
+            alignItems="center"
+          >
             <CardMedia
               component="img"
-              className= "image"
+              className="image"
               alt="icono tiempo diario"
               image={humidity}
             />
             <Typography variant="p" color="textSecondary">
-              mm: {props.data.rain? props.data.rain: 0}%
+              mm: {props.data.rain ? props.data.rain : 0}%
             </Typography>
           </Stack>
         </Box>
-    </Card>
+      </Card>
     </Fragment>
   );
 }

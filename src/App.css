@@ -4,7 +4,10 @@
 }
 
 .grid__style--item{
-    border: solid 1px rgb(58, 250, 234);
+    border: solid 3px rgb(255, 255, 255);
+    -webkit-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.67); 
+    box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.67);
+    margin-bottom: 10px;
 }
 
 .grid__style--item-block{
