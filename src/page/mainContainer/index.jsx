@@ -34,6 +34,7 @@ export default function MainContainer() {
         const showPosition = (position) => {
             setLat(position.coords.latitude);
             setLon(position.coords.longitude);
+
             fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,minutely&units=metric&appid=${API}`)
                 .then(r => r.json())
                 .then(d => {
@@ -108,7 +109,7 @@ export default function MainContainer() {
     return (
         <Grid container style={styles.gridContainer} justifyContent="center" sx={{height: '100vh'}} >
         <Grid item container sx={{ maxWidth: "890px"}} justifyContent="space-between" alignItems="center">
-            <Grid item container xs={9} gap="15px" wrap="none">
+            <Grid item container xs={9} gap="15px" > {/* he quitado wrap="none"*/}
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>
                 <GeoButton onSelectGeo={onHandleGeoLocalization}></GeoButton>
             </Grid>
@@ -116,7 +117,7 @@ export default function MainContainer() {
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
             <Grid item container xs={12} sx={{minHeight:"470px"}}>
-                <ActualDay data={weatherInfo} moon={moon}></ActualDay>
+                <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
                 <WeekDayContainer data={weatherInfo}></WeekDayContainer>
