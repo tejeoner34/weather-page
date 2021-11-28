@@ -1,4 +1,4 @@
-import { Grid } from '@mui/material'
+import { Grid, Box } from '@mui/material'
 import * as React from 'react';
 import './style.css'
 import BasicTextField from '../../components/input';
@@ -102,19 +102,20 @@ export default function MainContainer() {
         }
     };
 
+
+
+
     return (
-        <Grid container style={styles.gridContainer} justifyContent="center" >
-        <Grid item container sx={{ maxWidth: "890px"}}>
-            <Grid item xs={9}>
+        <Grid container style={styles.gridContainer} justifyContent="center" sx={{height: '100vh'}} >
+        <Grid item container sx={{ maxWidth: "890px"}} justifyContent="space-between" alignItems="center">
+            <Grid item container xs={9} gap="15px" wrap="none">
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>
-            </Grid>
-            <Grid item xs={1}>
                 <GeoButton onSelectGeo={onHandleGeoLocalization}></GeoButton>
             </Grid>
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{minHeight:"500px"}}>
+            <Grid item container xs={12} sx={{minHeight:"470px"}}>
                 <ActualDay data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
