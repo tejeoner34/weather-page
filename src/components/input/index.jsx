@@ -1,25 +1,20 @@
 import * as React from 'react';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import './style.css'
 
-export default function TextFieldSizes() {
+
+export default function TextFieldSizes(props) {
+
+  const onhandleSubmit = (e) => {
+    e.preventDefault();
+    props.onSearch(e.target.location.value)
+  };
+
   return (
-    <Box
-      component="form"
-      sx={{
-        '& .MuiTextField-root': { m: 1, width: '25ch' },
-      }}
-      noValidate
-      autoComplete="off"
-    >
-      <div>
-        <TextField
-          label="Size"
-          id="outlined-size-small"
-          defaultValue="Small"
-          size="small"
-        />
-      </div>
-    </Box>
+    
+      <form onSubmit={(e)=>onhandleSubmit(e)} >
+        <input className='search-bar' name='location' type="text" />
+        <button type='submit'>Search</button>
+      </form>
+    
   );
 }
