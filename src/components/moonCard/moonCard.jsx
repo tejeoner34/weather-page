@@ -15,7 +15,7 @@ export default function MoonCard(props) {
                     alt="icono tiempo diario"
                     image={window.location.origin + `/img/moon/01n.png`}
                 />
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography variant="body2" color='#F3F3F4' component="p">
                     Fase Lunar
                 </Typography>
                 </React.Fragment>
