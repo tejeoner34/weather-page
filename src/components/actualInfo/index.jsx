@@ -2,6 +2,8 @@
 import {  Typography, Stack, Box } from '@mui/material';
 import './style.css'
 import MoonCard from '../moonCard/moonCard';
+import { MetricContext } from '../../context/metric-context';
+import { useContext } from 'react';
 export default function ActualInfo(props){
 
     const addZero = (num)=>{
@@ -19,6 +21,8 @@ export default function ActualInfo(props){
     const minutesSunrise = addZero(sunrise.getMinutes());
 
     let currentSunrise = `${hoursSunrise}:${minutesSunrise}`;
+
+    const [metric] = useContext(MetricContext)
 
 
     
@@ -40,7 +44,7 @@ export default function ActualInfo(props){
                 width="4em"
                 spacing={-3}>
                 <Typography gutterBottom variant="h6" component="h4">
-                {Math.round(props.data.current?.feels_like)}º C
+                {Math.round(props.data.current?.feels_like)}º {metric === 'metric'? 'C':'F'}
                 </Typography>        
                 <Typography variant="body2" color="textSecondary" component="p"textAlign="center">
                     Sensación térmica
