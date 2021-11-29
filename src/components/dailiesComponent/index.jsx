@@ -17,6 +17,7 @@ export default function DailiesComponent(props) {
                     textAlign: 'center',
                     justifyContent: "center",
                     backgroundColor: '#FDECF2B5',
+                    height:"40px",
                     typography: 'p',
                     color: 'primary.accent',
                     fontFamily: 'OrbitronBold'
@@ -32,9 +33,10 @@ export default function DailiesComponent(props) {
                     justifyContent: "center",
                     textAlign: 'center',
                     backgroundColor: '#FDECF2B5',
+                    height:"40px",
                     fontFamily: "'OrbitronBold'",
                     typography: 'p',
-                }}>Máx:{Math.round(props.data?.daily?.[0].temp.max)}º {metric === 'metric' ? 'C' : 'F'}
+                }}>Máx: {Math.round(props.data?.daily?.[0].temp.max)}º {metric === 'metric' ? 'C' : 'F'}
             </Box>
             <Box
                 sx={{
@@ -42,10 +44,11 @@ export default function DailiesComponent(props) {
                     flexDirection: 'column',
                     alignItems: 'center',
                     justifyContent: "center",
+                    height:"40px",
                     backgroundColor: '#FDECF2B5',
                     fontFamily: 'OrbitronBold',
                 }}>
-                Min:{Math.round(props.data?.daily?.[0].temp.min)}º {metric === 'metric' ? 'C' : 'F'}
+                Min: {Math.round(props.data?.daily?.[0].temp.min)}º {metric === 'metric' ? 'C' : 'F'}
             </Box>
         </React.Fragment>
     )
