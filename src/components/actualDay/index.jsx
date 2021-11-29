@@ -91,7 +91,8 @@ export default function ActualDay(props) {
                             typography: 'p',
                             color: 'text',
                             fontFamily: 'MinecraftBold',
-                            fontSize: '18px'
+                            fontSize: '18px',
+                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
                         }}
                     >{fecha}</Box>
                     <Box
@@ -107,7 +108,8 @@ export default function ActualDay(props) {
                             typography: 'p',
                             color: 'text',
                             fontFamily: 'Minecraft',
-                            fontSize: '96px'
+                            fontSize: '96px',
+                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
                         }}
                     >{Math.round(props.data.current?.temp)}º{metric === 'metric'? 'C':'F'}</Box>
                 </Grid>

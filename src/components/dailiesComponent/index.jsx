@@ -11,6 +11,7 @@ export default function DailiesComponent(props) {
         <React.Fragment>
             <Box xs={12} 
                 sx={{
+                    boxShadow: '0px 1px 8px rgba(0, 0, 0, 0.25)',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -19,13 +20,14 @@ export default function DailiesComponent(props) {
                     backgroundColor: '#FDECF2B5',
                     typography: 'p',
                     color: 'primary.accent',
-                    fontFamily: 'OrbitronBold'
+                    fontFamily: 'OrbitronBold',
                 }}>mm: {props.data?.daily?.[0].rain ?
                     props.data?.daily?.[0].rain :
                     0}%
             </Box>
             <Box
                 sx={{
+                    boxShadow: '0px 1px 8px rgba(0, 0, 0, 0.25)',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
@@ -38,6 +40,7 @@ export default function DailiesComponent(props) {
             </Box>
             <Box
                 sx={{
+                    boxShadow: '0px 1px 8px rgba(0, 0, 0, 0.25)',
                     display: 'flex',
                     flexDirection: 'column',
                     alignItems: 'center',
