@@ -5,13 +5,10 @@ import AvatarContainer from '../../components/avatarContainer';
 import './style.css';
 import {MetricContext} from '../../context/metric-context.js';
 import { useContext } from 'react';
-
-
-
+// esto es para borrar
+// esto es para borrar
 export default function ActualDay(props) {
-
     const [metric] = useContext(MetricContext)
-
     let dataData = parseInt(props.current?.dt);
     let myDate = new Date(dataData*1000)
     let weekDay = myDate.getDay();
@@ -40,38 +37,10 @@ export default function ActualDay(props) {
         "Noviembre",
         "Diciembre"
     ];
-
     let actualMonth = monthNames[month];
     let actualDay = dias[weekDay];
-    const fecha = actualDay + ' ' + monthDay + ' ' + 'de' + ' ' + actualMonth;
-
-    
-
-
+    const fecha = actualDay + ' ' + monthDay + '  de ' + actualMonth;
     return (
-        // <Grid container className="grid__style--item" sx={{backgroundImage: `url(${window.location.origin + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})`}}>
-        //     <Grid item container xs={12}
-        //         justifyContent="space-between"
-        //         spacing={2}>
-        //         <Grid item xs={3}>
-        //             <Box sx={{
-        //                 border: 'solid',
-        //             }}>contenido</Box>
-        //         </Grid>
-
-        //         <Grid item container xs={2} justifyContent="center" alignItems='center' flexDirection='column' rowGap={2} >
-        //             <Grid item container justifyContent="space-between" alignItems='space-between' flexDirection='column' rowGap={3}>
-        //                 <DailiesComponent data={props.data}></DailiesComponent>
-        //             </Grid>
-
-        //             <Grid item><AvatarContainer data={props.current}></AvatarContainer></Grid>
-        //         </Grid>
-        //         <Grid item xs={12}>
-        //             <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
-        //         </Grid>
-        //     </Grid>
-        // </Grid>
-
         <Grid container sx={{ backgroundImage: `url(${window.location.origin + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})` }} justifyContent="space-between" flexDirection="row">
             <Grid item container xs={12}
                 justifyContent="space-between"
@@ -91,8 +60,7 @@ export default function ActualDay(props) {
                             typography: 'p',
                             color: 'text',
                             fontFamily: 'MinecraftBold',
-                            fontSize: '18px',
-                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
+                            fontSize: '18px'
                         }}
                     >{fecha}</Box>
                     <Box
@@ -108,20 +76,19 @@ export default function ActualDay(props) {
                             typography: 'p',
                             color: 'text',
                             fontFamily: 'Minecraft',
-                            fontSize: '96px',
-                            boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
+                            fontSize: '96px'
                         }}
                     >{Math.round(props.data.current?.temp)}º{metric === 'metric'? 'C':'F'}</Box>
                 </Grid>
-                <Grid item container xs={2} justifyContent="space-between" alignItems='center' flexDirection='column' rowGap={18} >
+                <Grid item container xs={2} justifyContent="space-between" alignItems='center' flexDirection='column' rowGap={15} >
                     <Grid item container justifyContent="space-between" flexDirection='column' rowGap={2}>
                         <DailiesComponent data={props.data}></DailiesComponent>
                     </Grid>
-                    <Grid item >
+                    <Grid item paddingBottom="30px">
                         <AvatarContainer data={props.current}></AvatarContainer>
                     </Grid>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                     <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
                 </Grid>
             </Grid>

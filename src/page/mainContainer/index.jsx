@@ -10,12 +10,12 @@ import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
 import GeoButton from '../../components/geo-button-component/geo-button-component';
 import Background from '../../page/assets/Background.png';
-import {apiKey} from '/Users/ManuGrande/Desktop/WEATHER-V2/weather-page/src/apiKey.js';
+// import {apiKey} from '/Users/ManuGrande/Desktop/WEATHER-V2/weather-page/src/apiKey.js';
 
 
 export default function MainContainer() {
 
-    const API = apiKey;
+    const API = '';
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
@@ -40,7 +40,7 @@ export default function MainContainer() {
                 .then(r => r.json())
                 .then(d => {
                     updateWeatherInfo({ ...d })
-                    console.log(d)
+                    
                     const luna = d.daily[0].moon_phase;
                     updateMoon(luna);
                 });
@@ -55,6 +55,11 @@ export default function MainContainer() {
         fetch(`https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${API}`)
             .then(r => r.json())
             .then(d => {
+                if(d.cod !== 200){
+                    console.log(d.status)
+                }else{
+
+                
                 // setData(oldvalue=> oldvalue.splice(0,1));
                 setLat(d.coord.lat);
                 setLon(d.coord.lon);
@@ -62,7 +67,7 @@ export default function MainContainer() {
                     .then(r => r.json())
                     .then(d => {
                         updateWeatherInfo({ ...d })
-                    })
+                    })}
             });
     };
 
@@ -117,7 +122,7 @@ export default function MainContainer() {
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{maxHeight:"500px", overflow:"hidden"}} className="grid__style--item">
+            <Grid item container xs={12} sx={{maxHeight:"525px", overflow:"hidden"}} className="grid__style--item">
                 <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
