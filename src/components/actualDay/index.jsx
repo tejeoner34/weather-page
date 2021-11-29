@@ -78,7 +78,7 @@ export default function ActualDay(props) {
                 flexDirection="row"
                 spacing={2}
                 sx={{ marginTop: '1em', marginLeft: '1em', marginRight: '1em' }}>
-                <Grid container item xs={3} justifyContent="start" flexDirection="column" rowGap={3} >
+                <Grid container item xs={4} justifyContent="start" flexDirection="column" rowGap={4} >
                     <Box
                         sx={{
                             paddingTop: '10px',
@@ -90,8 +90,8 @@ export default function ActualDay(props) {
                             backgroundColor: '#FDECF2B5',
                             typography: 'p',
                             color: 'text',
-                            fontFamily: 'Minecraft',
-                            fontSize: '18px',
+                            fontFamily: 'MinecraftBold',
+                            fontSize: '18px'
                         }}
                     >{fecha}</Box>
                     <Box

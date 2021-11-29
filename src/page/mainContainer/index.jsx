@@ -109,14 +109,14 @@ export default function MainContainer() {
     return (
         <Grid container style={styles.gridContainer} justifyContent="center" sx={{height: '100vh'}} >
         <Grid item container sx={{ maxWidth: "890px"}} justifyContent="space-between" alignItems="center">
-            <Grid item container xs={9} gap="15px" > {/* he quitado wrap="none"*/}
+            <Grid item container xs={9} gap="15px"> 
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>
                 <GeoButton onSelectGeo={onHandleGeoLocalization}></GeoButton>
             </Grid>
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{minHeight:"470px"}}>
+            <Grid item container xs={12} sx={{maxHeight:"500px", overflow:"hidden"}} className="grid__style--item">
                 <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>

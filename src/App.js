@@ -11,7 +11,6 @@ function App() {
       <CssBaseline/>
       <MetricProvider value='metric'>
       <MainContainer>
-
       </MainContainer>
       </MetricProvider>
       </ThemeProvider>
