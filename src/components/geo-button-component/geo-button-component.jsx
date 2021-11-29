@@ -15,6 +15,7 @@ export default function GeoButton(props) {
                     minWidth: '33px',
                     minHeight: '33px',
                     borderRadius: 0,
+                    elevation:2
 
                 }}
             sx={
@@ -23,7 +24,7 @@ export default function GeoButton(props) {
                     backgroundColor: 'primary.accent',
                     "&:hover": { backgroundColor: 'primary.accent' },
                     borderColor: 'primary.cardBG',
-                    boxShadow: 6,
+                    boxShadow: '3px 3px 2px rgba(0, 0, 0, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.84), inset 4px 3px 4px rgba(255, 255, 255, 0.33)'
 
                 }}
             variant="contained"><img src={geoLogo} /></Button>

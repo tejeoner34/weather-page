@@ -1,15 +1,16 @@
-.grid__style{
+.grid__style {
     /* border: solid 1px black; */
     background-color: cadetblue;
 }
 
-.grid__style--item{
+.grid__style--item {
     border: solid 3px rgb(255, 255, 255);
-    -webkit-box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.67); 
-    box-shadow: 4px 4px 2px 0px rgba(0,0,0,0.67);
+    -webkit-box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.67);
+    box-shadow: 4px 4px 2px 0px rgba(0, 0, 0, 0.67);
     margin-bottom: 10px;
 }
 
-.grid__style--item-block{
-    
+body {
+    background: url('../src/page/assets/Background.png');
+    background-size:contain;
 }

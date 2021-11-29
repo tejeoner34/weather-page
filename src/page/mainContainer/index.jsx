@@ -10,11 +10,12 @@ import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
 import GeoButton from '../../components/geo-button-component/geo-button-component';
 import Background from '../../page/assets/Background.png';
+import {apiKey} from '/Users/ManuGrande/Desktop/WEATHER-V2/weather-page/src/apiKey.js';
 
 
 export default function MainContainer() {
 
-    const API = '';
+    const API = apiKey;
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
@@ -107,7 +108,7 @@ export default function MainContainer() {
 
 
     return (
-        <Grid container style={styles.gridContainer} justifyContent="center" sx={{height: '100vh'}} >
+        <Grid container style={styles.gridContainer} justifyContent="center" sx={{height: '100vh'}} className="body" >
         <Grid item container sx={{ maxWidth: "890px"}} justifyContent="space-between" alignItems="center">
             <Grid item container xs={9} gap="15px"> 
                 <BasicTextField onSearch={onWeatherSearch}></BasicTextField>

@@ -26,9 +26,9 @@ export default function WeekCard(props) {
   return (
     <Fragment>
       <Card square={true} className="card_container" variant="elevation: 2" sx={{
-        width: '116px', height: '180px', bgcolor: '#F0EFF2', marginBottom:"20px",
+        width: '116px', height: '180px', bgcolor: '#F0EFF2', marginBottom:"20px"
       }}>
-        <Typography variant="p" >
+        <Typography variant="p" fontFamily='OrbitronBold' fontSize='15px'>
           {`${nombreDia}, ${monthDay}`}
         </Typography>
         <CardMedia
@@ -37,7 +37,7 @@ export default function WeekCard(props) {
           alt="icono tiempo diario"
           image={window.location.origin + `/img/icons/${props.data.weather[0].icon}.png`}
         />
-        <Box className='temperature_container'>
+        <Box className='temperature_container' fontSize='11px' fontFamily='OrbitronLight'>
           <Stack direction="row"
             justifyContent="flex-start"
             gap="5px"
