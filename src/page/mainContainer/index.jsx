@@ -15,7 +15,7 @@ import Background from '../../page/assets/Background.png';
 
 export default function MainContainer() {
 
-    const API = 'fbe6cfd7582195b7a5d395286d5ea052';
+    const API = '';
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
