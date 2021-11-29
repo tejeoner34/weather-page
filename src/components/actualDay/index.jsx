@@ -113,15 +113,15 @@ export default function ActualDay(props) {
                         }}
                     >{Math.round(props.data.current?.temp)}º{metric === 'metric'? 'C':'F'}</Box>
                 </Grid>
-                <Grid item container xs={2} justifyContent="space-between" alignItems='center' flexDirection='column' rowGap={18} >
+                <Grid item container xs={2} justifyContent="space-between" alignItems='center' flexDirection='column' rowGap={15} >
                     <Grid item container justifyContent="space-between" flexDirection='column' rowGap={2}>
                         <DailiesComponent data={props.data}></DailiesComponent>
                     </Grid>
-                    <Grid item >
+                    <Grid item paddingBottom="30px">
                         <AvatarContainer data={props.current}></AvatarContainer>
                     </Grid>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={12} >
                     <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
                 </Grid>
             </Grid>
