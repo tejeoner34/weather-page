@@ -27,6 +27,6 @@ export default function GeoButton(props) {
                     boxShadow: '3px 3px 2px rgba(0, 0, 0, 0.25), 1px 1px 2px rgba(0, 0, 0, 0.84), inset 4px 3px 4px rgba(255, 255, 255, 0.33)'
 
                 }}
-            variant="contained"><img src={geoLogo} /></Button>
+            variant="contained"><img src={geoLogo} alt='geologo' /></Button>
     )
 }
