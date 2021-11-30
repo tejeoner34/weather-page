@@ -122,7 +122,7 @@ export default function MainContainer() {
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{maxHeight:"525px", overflow:"hidden"}} className="grid__style--item">
+            <Grid item container xs={12} sx={{maxHeight:"522px", overflow:"hidden"}} className="grid__style--item">
                 <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
