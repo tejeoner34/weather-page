@@ -19,7 +19,8 @@ export default function DailiesComponent(props) {
                     height:"40px",
                     typography: 'p',
                     color: 'primary.accent',
-                    fontFamily: 'OrbitronBold'
+                    fontFamily: 'OrbitronBold',
+                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
                 }}>mm: {props.data?.daily?.[0].rain ?
                     props.data?.daily?.[0].rain :
                     0}%
@@ -35,6 +36,7 @@ export default function DailiesComponent(props) {
                     height:"40px",
                     fontFamily: "'OrbitronBold'",
                     typography: 'p',
+                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
                 }}>Máx: {Math.round(props.data?.daily?.[0].temp.max)}º {metric === 'metric' ? 'C' : 'F'}
             </Box>
             <Box
@@ -46,6 +48,7 @@ export default function DailiesComponent(props) {
                     height:"40px",
                     backgroundColor: '#FDECF2B5',
                     fontFamily: 'OrbitronBold',
+                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.25)'
                 }}>
                 Min: {Math.round(props.data?.daily?.[0].temp.min)}º {metric === 'metric' ? 'C' : 'F'}
             </Box>
