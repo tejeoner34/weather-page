@@ -10,12 +10,12 @@ import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
 import GeoButton from '../../components/geo-button-component/geo-button-component';
 import Background from '../../page/assets/Background.png';
-// import {apiKey} from '/Users/ManuGrande/Desktop/WEATHER-V2/weather-page/src/apiKey.js';
+import {apiKey} from '../../apiKey.js';
 
 
 export default function MainContainer() {
 
-    const API = 'c273fd878687a96d2eb48a1800b4fb9c';
+    const API = apiKey;
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
