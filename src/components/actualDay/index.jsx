@@ -4,7 +4,7 @@ import DailiesComponent from '../dailiesComponent';
 import AvatarContainer from '../../components/avatarContainer';
 import './style.css';
 import {MetricContext} from '../../context/metric-context.js';
-import { useContext } from 'react';
+import { Fragment, useContext } from 'react';
 // esto es para borrar
 // esto es para borrar
 export default function ActualDay(props) {
@@ -41,7 +41,8 @@ export default function ActualDay(props) {
     let actualDay = dias[weekDay];
     const fecha = actualDay + ' ' + monthDay + '  de ' + actualMonth;
     return (
-        <Grid container sx={{ backgroundImage: `url(${process.env.PUBLIC_URL + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})` }} justifyContent="space-between" flexDirection="row">
+        <Fragment>
+        {props.data.current?.weather[0].icon !== undefined && <Grid container sx={{ backgroundImage: `url(${process.env.PUBLIC_URL + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})` }} justifyContent="space-between" flexDirection="row">
             <Grid item container xs={12}
                 justifyContent="space-between"
                 flexDirection="row"
@@ -94,6 +95,7 @@ export default function ActualDay(props) {
                     <ActualInfo data={props.data} moon={props.moon}></ActualInfo>
                 </Grid>
             </Grid>
-        </Grid>
+        </Grid>}
+        </Fragment>
     )
 }

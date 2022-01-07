@@ -125,7 +125,7 @@ export default function MainContainer() {
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
             <Grid item container xs={12} sx={{maxHeight:"509px", overflow:"hidden", marginTop:'-10px'}} className="grid__style--item">
-                {weatherInfo&& <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>}
+                <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
                 <WeekDayContainer data={weatherInfo}></WeekDayContainer>
