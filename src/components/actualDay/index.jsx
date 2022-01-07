@@ -41,7 +41,7 @@ export default function ActualDay(props) {
     let actualDay = dias[weekDay];
     const fecha = actualDay + ' ' + monthDay + '  de ' + actualMonth;
     return (
-        <Grid container sx={{ backgroundImage: `url(${window.location.origin + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})` }} justifyContent="space-between" flexDirection="row">
+        <Grid container sx={{ backgroundImage: `url(${process.env.PUBLIC_URL + `/img/weather-img/${props.data?.current?.weather[0].icon}.png`})` }} justifyContent="space-between" flexDirection="row">
             <Grid item container xs={12}
                 justifyContent="space-between"
                 flexDirection="row"

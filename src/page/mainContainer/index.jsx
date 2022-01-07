@@ -37,8 +37,6 @@ export default function MainContainer() {
         const showPosition = (position) => {
             setLat(position.coords.latitude);
             setLon(position.coords.longitude);
-            console.log(position.coords.latitude)
-            console.log(position.coords.longitude)
 
             fetch(`${serverFetchURL}/current-data?lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
                 .then(r => r.json())
@@ -127,7 +125,7 @@ export default function MainContainer() {
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
             <Grid item container xs={12} sx={{maxHeight:"509px", overflow:"hidden", marginTop:'-10px'}} className="grid__style--item">
-                <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
+                {weatherInfo&& <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>}
             </Grid>
             <Grid item container xs={12}>
                 <WeekDayContainer data={weatherInfo}></WeekDayContainer>

@@ -13,35 +13,35 @@ export default function AvatarContainer(props) {
         return (
 
             <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', mt:"5px", mb:"5px"}}>
-                <img style={{height: '70%'}} src={window.location.origin + "/img/avatar/asset39.png"} alt="Avatar" />
+                <img style={{height: '70%'}} src={process.env.PUBLIC_URL + "/img/avatar/asset39.png"} alt="Avatar" />
             </Box>
         )
     }else if(props.data?.weather[0].icon === '13d' || props.data?.weather[0].icon === '13n' || (metric === 'metric' && props.data?.temp<10) || (metric === 'imperial' && props.data?.temp<50 )){
         return (
 
             <Box sx={{display: 'flex', justifyContent: 'center',alignItems: 'center' , mt:"5px", mb:"5px"}}>
-                <img style={{height: '70%'}} src={window.location.origin + "/img/avatar/asset41.png"} alt="Avatar" />
+                <img style={{height: '70%'}} src={process.env.PUBLIC_URL + "/img/avatar/asset41.png"} alt="Avatar" />
             </Box>
         )
     }else if((metric === 'metric' && props.data?.temp>30) || (metric === 'imperial' && props.data?.temp>86 )){
         return (
 
             <Box sx={{display: 'flex', justifyContent: 'center',alignItems: 'center' , mt:"5px", mb:"5px"}}>
-                <img style={{height: '70%'}} src={window.location.origin + "/img/avatar/asset42.png"} alt="Avatar" />
+                <img style={{height: '70%'}} src={process.env.PUBLIC_URL + "/img/avatar/asset42.png"} alt="Avatar" />
             </Box>
         )
     }else if((metric === 'metric' && props.data?.temp>20 && props.data?.temp<=30)||(metric === 'imperial' && props.data?.temp>68 &&  props.data?.temp<=86)){
         return (
 
             <Box sx={{display: 'flex', justifyContent: 'center',alignItems: 'center' , mt:"5px", mb:"5px"}}>
-                <img style={{height: '70%'}} src={window.location.origin + "/img/avatar/asset40.png"} alt="Avatar" />
+                <img style={{height: '70%'}} src={process.env.PUBLIC_URL + "/img/avatar/asset40.png"} alt="Avatar" />
             </Box>
         )
     }else{
         return (
 
             <Box sx={{display: 'flex', justifyContent: 'center',alignItems: 'center' , mt:"5px", mb:"5px"}}>
-                <img style={{height: '70%'}} src={window.location.origin + "/img/avatar/asset43.png"} alt="Avatar" />
+                <img style={{height: '70%'}} src={process.env.PUBLIC_URL + "/img/avatar/asset43.png"} alt="Avatar" />
             </Box>
         )
     }

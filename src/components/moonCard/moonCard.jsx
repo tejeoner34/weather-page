@@ -8,7 +8,7 @@ export default function MoonCard(props) {
                     component="img"
                     className="image_actualinfo"
                     alt="icono tiempo diario"
-                    image={window.location.origin + `/img/moon/01n.png`}
+                    image={process.env.PUBLIC_URL + `/img/moon/01n.png`}
                 />
                 <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                     Fase Lunar
@@ -22,7 +22,7 @@ export default function MoonCard(props) {
                     component="img"
                     className="image_actualinfo"
                     alt="icono tiempo diario"
-                    image={window.location.origin + `/img/moon/creciente.png`}
+                    image={process.env.PUBLIC_URL + `/img/moon/creciente.png`}
                 />
                 <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                     Fase Lunar
@@ -36,7 +36,7 @@ export default function MoonCard(props) {
                 component="img"
                 className="image_actualinfo"
                 alt="icono tiempo diario"
-                image={window.location.origin + `/img/moon/mitadcreciente.png`}
+                image={process.env.PUBLIC_URL + `/img/moon/mitadcreciente.png`}
             />
             <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                 Fase Lunar
@@ -50,7 +50,7 @@ export default function MoonCard(props) {
                     component="img"
                     className="image_actualinfo"
                     alt="icono tiempo diario"
-                    image={window.location.origin + `/img/moon/muycreciente.png`}
+                    image={process.env.PUBLIC_URL + `/img/moon/muycreciente.png`}
                 />
                 <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                     Fase Lunar
@@ -64,7 +64,7 @@ export default function MoonCard(props) {
                 component="img"
                 className="image_actualinfo"
                 alt="icono tiempo diario"
-                image={window.location.origin + `/img/moon/01n.png`}
+                image={process.env.PUBLIC_URL + `/img/moon/01n.png`}
             />
             <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                 Fase Lunar
@@ -78,7 +78,7 @@ export default function MoonCard(props) {
                 component="img"
                 className="image_actualinfo"
                 alt="icono tiempo diario"
-                image={window.location.origin + `/img/moon/decreciente.png`}
+                image={process.env.PUBLIC_URL + `/img/moon/decreciente.png`}
             />
             <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                 Fase Lunar
@@ -92,7 +92,7 @@ export default function MoonCard(props) {
                 component="img"
                 className="image_actualinfo"
                 alt="icono tiempo diario"
-                image={window.location.origin + `/img/moon/pocodecreciente.png`}
+                image={process.env.PUBLIC_URL + `/img/moon/pocodecreciente.png`}
             />
             <Typography variant="p" textAlign="center" fontFamily='OrbitronLight' fontSize='14px' color="#F3F3F4">
                 Fase Lunar

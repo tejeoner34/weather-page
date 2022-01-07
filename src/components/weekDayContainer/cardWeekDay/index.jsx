@@ -35,7 +35,7 @@ export default function WeekCard(props) {
           component="img"
           className="image_card"
           alt="icono tiempo diario"
-          image={window.location.origin + `/img/icons/${props.data.weather[0].icon}.png`}
+          image={process.env.PUBLIC_URL + `/img/icons/${props.data.weather[0].icon}.png`}
         />
         <Box className='temperature_container' fontSize='11px' fontFamily='OrbitronLight'>
           <Stack direction="row"
