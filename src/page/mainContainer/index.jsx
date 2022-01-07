@@ -12,9 +12,12 @@ import GeoButton from '../../components/geo-button-component/geo-button-componen
 import Background from '../../page/assets/Background.png';
 
 
+
 export default function MainContainer() {
 
+
     const serverFetchURL = 'http://localhost:4567/weather'
+
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
