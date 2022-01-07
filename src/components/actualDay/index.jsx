@@ -46,7 +46,7 @@ export default function ActualDay(props) {
                 justifyContent="space-between"
                 flexDirection="row"
                 spacing={2}
-                sx={{ marginTop: '1em', marginLeft: '1em', marginRight: '1em' }}>
+                sx={{ marginTop: '0', marginLeft: '1em', marginRight: '1em' }}>
                 <Grid container item xs={4} justifyContent="start" flexDirection="column" rowGap={4} >
                     <Box
                         sx={{

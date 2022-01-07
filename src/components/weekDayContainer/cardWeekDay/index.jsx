@@ -26,7 +26,7 @@ export default function WeekCard(props) {
   return (
     <Fragment>
       <Card square={true} className="card_container" variant="elevation: 2" sx={{
-        width: '116px', height: '180px', bgcolor: '#F0EFF2', marginBottom:"20px"
+        width: '116px', height: '170px', bgcolor: '#F0EFF2'
       }}>
         <Typography variant="p" fontFamily='OrbitronBold' fontSize='15px'>
           {`${nombreDia}, ${monthDay}`}

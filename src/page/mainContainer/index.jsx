@@ -10,12 +10,14 @@ import { MetricContext } from '../../context/metric-context';
 import { useContext } from "react";
 import GeoButton from '../../components/geo-button-component/geo-button-component';
 import Background from '../../page/assets/Background.png';
-import {apiKey} from '../../apiKey.js';
+
 
 
 export default function MainContainer() {
 
-    const API = apiKey;
+
+    const serverFetchURL = 'http://localhost:4567/weather'
+
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
     const [lon, setLon] = useState('');
@@ -35,8 +37,10 @@ export default function MainContainer() {
         const showPosition = (position) => {
             setLat(position.coords.latitude);
             setLon(position.coords.longitude);
+            console.log(position.coords.latitude)
+            console.log(position.coords.longitude)
 
-            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,minutely&units=metric&appid=${API}`)
+            fetch(`${serverFetchURL}/current-data?lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
                 .then(r => r.json())
                 .then(d => {
                     updateWeatherInfo({ ...d })
@@ -52,7 +56,7 @@ export default function MainContainer() {
     const onWeatherSearch = (childata) => {
         let item = childata;
         item===''?item='madrid': item = childata
-        fetch(`https://api.openweathermap.org/data/2.5/weather?q=${item}&appid=${API}`)
+        fetch(`${serverFetchURL}/search-data?q=${item}`)
             .then(r => r.json())
             .then(d => {
                 if(d.cod !== 200){
@@ -63,7 +67,7 @@ export default function MainContainer() {
                 // setData(oldvalue=> oldvalue.splice(0,1));
                 setLat(d.coord.lat);
                 setLon(d.coord.lon);
-                return fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${d.coord.lat}&lon=${d.coord.lon}&exclude=hourly,minutely&units=${metric}&appid=${API}`)
+                return fetch(`${serverFetchURL}/get-searched-data?lat=${d.coord.lat}&lon=${d.coord.lon}&units=${metric}`)
                     .then(r => r.json())
                     .then(d => {
                         updateWeatherInfo({ ...d })
@@ -72,7 +76,7 @@ export default function MainContainer() {
     };
 
     const onMetricChange = (childata) =>{
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=hourly,minutely&units=${childata}&appid=${API}`)
+        fetch(`${serverFetchURL}/metric-change?lat=${lat}&lon=${lon}&units=${childata}`)
             .then(r => r.json())
             .then(d => {
                 updateWeatherInfo({ ...d })
@@ -92,7 +96,7 @@ export default function MainContainer() {
         const showPosition = (position) => {
             setLat(position.coords.latitude);
             setLon(position.coords.longitude);
-            fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${position.coords.latitude}&lon=${position.coords.longitude}&exclude=hourly,minutely&units=metric&appid=${API}`)
+            fetch(`${serverFetchURL}/current-localization?lat=${position.coords.latitude}&lon=${position.coords.longitude}`)
                 .then(r => r.json())
                 .then(d => {
                     updateWeatherInfo({ ...d })
@@ -122,7 +126,7 @@ export default function MainContainer() {
             <Grid item xs={2}>
                 <UnitChange onMetricChange={onMetricChange}></UnitChange>
             </Grid>
-            <Grid item container xs={12} sx={{maxHeight:"522px", overflow:"hidden"}} className="grid__style--item">
+            <Grid item container xs={12} sx={{maxHeight:"509px", overflow:"hidden", marginTop:'-10px'}} className="grid__style--item">
                 <ActualDay current={weatherInfo.current} data={weatherInfo} moon={moon}></ActualDay>
             </Grid>
             <Grid item container xs={12}>
