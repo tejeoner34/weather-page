@@ -16,7 +16,7 @@ import Background from '../../page/assets/Background.png';
 export default function MainContainer() {
 
 
-    const serverFetchURL = 'https://weather-app3434.herokuapp.com/weather'
+    const serverFetchURL = 'https://weather-app-olq0.onrender.com/weather'
 
     const [metric] = useContext(MetricContext);
     const [lat, setLat] = useState('');
